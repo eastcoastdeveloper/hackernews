@@ -1,0 +1,116 @@
+.content {
+    height: calc(100vh - 110px);
+    font-family: sans-serif;
+    padding: 20px;
+    main {
+      background-color: #313b3f;
+      position: relative;
+      height: 100%;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      max-width: 750px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .search-results {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+        li {
+          line-height: 20px;
+          padding: 5px 15px;
+          list-style-position: inside;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: white;
+          a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+              color: #d9a74a;
+            }
+          }
+        }
+        li:nth-child(odd) {
+          background-color: #03658c;
+        }
+        li:nth-child(even) {
+          background-color: #457b9d;
+        }
+      }
+      #search-history {
+        position: absolute;
+        overflow-y: auto;
+        background-color: #03658c;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 750px;
+        transition: left 0.5s;
+        border-radius: 6px;
+        color: white;
+        h3 {
+          color: #fff;
+          margin-top: 0;
+          padding-left: 10px;
+          padding-bottom: 7px;
+          font: bold 16px sans-serif;
+          letter-spacing: 1px;
+          background-color: #457b9d;
+          padding-top: 10px;
+        }
+        ul {
+          padding-left: 15px;
+          line-height: 30px;
+          list-style-type: none;
+          li {
+            width: calc(100% - 35px);
+            background-color: #457b9d;
+            border-radius: 4px;
+            padding: 0 10px;
+          }
+          li:not(:first-child) {
+            margin-top: 15px;
+          }
+        }
+        .history-query {
+          font: normal 14px sans-serif;
+          padding-top: 5px;
+          overflow: auto;
+          span:first-child {
+            text-transform: capitalize;
+            float: left;
+          }
+          span:last-child {
+            cursor: pointer;
+            float: right;
+          }
+        }
+        .history-results {
+          margin-top: 5px;
+          padding-bottom: 5px;
+          a {
+            font: normal 13px sans-serif;
+            color: white;
+            text-decoration: none;
+            display: block;
+            line-height: 22px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+      .show-panel {
+        left: 0;
+      }
+      .hide-panel {
+        left: 110%;
+      }
+    }
+  }
+  .overflow-y-none {
+    overflow-y: hidden !important;
+  }
+  
